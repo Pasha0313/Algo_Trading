@@ -1,0 +1,205 @@
+
+# 0. **Simple Price and Volume**
+def define_strategy_PV(data, parameters):
+# 1. **Simple Moving Average**
+def define_strategy_SMA(data, parameters):
+# 2. **Moving Average Convergence Divergence (MACD) Histogram**
+def define_strategy_MACD(data, parameters):
+# 3. **RSI with Moving Average**
+def define_strategy_RSI_MA(data, parameters):
+# 4. **Relative Strength Index with Divergence (RSI Divergence)**
+def define_strategy_RSI(data, parameters):
+# 5. **Stochastic RSI**
+def define_strategy_Stochastic_RSI(data, parameters):
+# 6. **Bollinger Bands with ADX Trend Filter**
+def define_strategy_Bollinger_ADX(data, parameters):
+# 7. **Triple Exponential Moving Average (TEMA) with Momentum Filter**
+def define_strategy_TEMA_momentum(data, parameters):
+# 8. **Volume Weighted Average Price (VWAP) **
+def define_strategy_VWAP(data, parameters):
+# 9. **Volume Weighted Average Price (VWAP) with Momentum**
+def define_strategy_VWAP_momentum(data, parameters):
+# 10. **Bollinger Bands Breakout**
+def define_strategy_Bollinger_breakout(data, parameters):
+# 11. **Bollinger Bands Squeeze**
+def define_strategy_Bollinger_squeeze(data, parameters):   
+# 12. **Exponential Moving Average Cross Strategy**
+def define_strategy_EMA_cross(data, parameters):
+# 13. **Exponential Moving Average Envelope**
+def define_strategy_EMA_envelope(data, parameters):
+# 14. **Triple Exponential Moving Average (TEMA)**
+def define_strategy_TEMA(data, parameters):
+# 15. **Donchian Channel**
+def define_strategy_Donchian(data, parameters):
+# 16. **Aroon Indicator**
+def define_strategy_Aroon(data, parameters):
+# 17. **Williams %R**
+def define_strategy_WilliamsR(data, parameters):
+# 18. **Elder Ray Index**
+def define_strategy_Elder_Ray(data, parameters):
+# 19. **Klinger Oscillator**
+def define_strategy_Klinger(data, parameters):
+# 20. **Chande Momentum Oscillator (CMO)**
+def define_strategy_CMO(data, parameters):
+# 21. **Price Oscillator**
+def define_strategy_Price_Oscillator(data, parameters):
+# 22. **Ultimate Oscillator**
+def define_strategy_Ultimate_Oscillator(data, parameters):
+# 23. **Chaikin Oscillator**
+def define_strategy_Chaikin(data, parameters):   
+# 24. **Chaikin Money Flow (CMF)**
+def define_strategy_CMF(data, parameters):             
+# 25. **Fractal Chaos Bands**
+def define_strategy_Fractal_Chaos(data, parameters):
+# 26. **SuperTrend**
+def define_strategy_SuperTrend(data, parameters):
+# 27. **ZigZag Indicator**
+def define_strategy_ZigZag(data, parameters):
+# 28. **Hull Moving Average**
+def define_strategy_Hull_MA(data, parameters):
+# 29. **Gann Fan**
+def define_strategy_Gann_Fan(data, parameters):
+# 30. **Price Rate of Change (ROC)**
+def define_strategy_ROC(data, parameters):
+# 31. **MFI (Money Flow Index) Divergence**
+def define_strategy_MFI_divergence(data, parameters):
+# 32. **Parabolic SAR (PSAR)**
+def define_strategy_PSAR_simple(data, parameters):
+# 33. **Chaikin Money Flow (CMF) Calculation**
+def define_strategy_CMF_ADX(data, parameters):
+# 34. **Parabolic SAR (PSAR) with Momentum**
+def define_strategy_PSAR_momentum(data, parameters):
+# 35. **Trix Indicator**
+def define_strategy_Trix(data, parameters):
+# 36. **Keltner Channel Breakout**
+def define_strategy_Keltner_channel(data, parameters):
+# 37. **Momentum Strategy**
+def define_strategy_Momentum(data, parameters):
+# 38. **Ichimoku Cloud**
+def define_strategy_Ichimoku(data, parameters):
+# 39. **Z-Score Mean Reversion**
+def define_strategy_Zscore(data, parameters):
+# 40. **Moving Average Envelope**
+def define_strategy_MA_envelope(data, parameters):
+# 41. **Average True Range (ATR) Breakout**
+def define_strategy_ATR(data, parameters):
+# 42. **Average Directional Index (ADX)**
+def define_strategy_ADX(data, parameters):
+# 43. **Commodity Channel Index (CCI)**
+def define_strategy_CCI(data, parameters):
+# 44. **Linear Regression Channel**
+def define_strategy_Linear_Regression(data, parameters):
+# 45. **Volume Weighted Moving Average (VWMA) Calculation** 
+def define_strategy_VWMA_Price_Oscillator(data, parameters):
+# 46. **Pivot Points Classic**
+def define_strategy_Pivot_Points_Classic(data, parameters):        
+# 47. **Force Index**
+def define_strategy_Force_Index(data, parameters):
+# 48. **Chandelier Exit**
+def define_strategy_Chandelier_Exit(data, parameters):
+# 49. **Fibonacci Retracement Levels**
+def define_strategy_Fibonacci(data, parameters):
+# 50. **Accumulation/Distribution Line (A/D Line)**
+def define_strategy_ADL(data, parameters):
+# 51. **RSI with Bollinger Bands**
+def define_strategy_RSI_Bollinger(data, parameters):
+# 52. **Turtle Trading**
+def define_strategy_Turtle_Trading(data, parameters):
+# 53. **Mean Reversion Strategy**
+def define_strategy_Mean_Reversion(data, parameters):
+# 54. **Breakout Strategy**
+def define_strategy_Breakout(data, parameters):
+# 55. **RSI Divergence Strategy**
+def define_strategy_RSI_Divergence(data, parameters):
+# 56. **Moving Average Cross with RSI Filter**
+def define_strategy_MA_Cross_RSI(data, parameters):
+# 57. **ADX with Moving Averages**
+def define_strategy_ADX_MA(data, parameters):
+# 58. **Bollinger Bands Breakout with Momentum Oscillator**
+def define_strategy_Bollinger_Breakout_Momentum_Oscillator(data, parameters):
+# 59. **Fibonacci Retracement with Moving Average Filter**
+def define_strategy_Fibonacci_MA(data, parameters):
+# 60. **Mean-Variance Optimization Strategy**
+def define_strategy_Mean_Variance_Optimization(data, parameters):
+# 61. **Moving Average Ribbon**
+def define_strategy_MA_ribbon(data, parameters):
+# 62. **ADX + DI (Directional Indicators)**
+def define_strategy_ADX_DI(data, parameters):
+# 63. **MACD Histogram with RSI**
+def define_strategy_MACD_RSI(data, parameters):
+# 64. **Fibonacci Retracement Strategy**
+def define_strategy_Fibonacci_retracement(data, parameters):
+# 65. **Relative Strength Index (RSI) Trend Reversal Strategy**
+def define_strategy_RSI_trend_reversal(data, parameters):
+# 66. **Chande Momentum Oscillator with EMA**
+def define_strategy_CMO_EMA(data, parameters):
+# 67. **Moving Average Cross with Momentum**
+def define_strategy_MA_momentum(data, parameters):
+# 68. **RSI and Stochastic Oscillator**
+def define_strategy_RSI_Stochastic(data, parameters):
+# 69. **Garman-Klass Volatility Strategy** # 
+def define_strategy_Garman_Klass_Volatility(data, parameters):
+# 70. **Momentum Oscillator with MACD**
+def define_strategy_Momentum_MACD(data, parameters):
+# 71. **Bollinger Bands with Stochastic Oscillator**
+def define_strategy_Bollinger_Stochastic(data, parameters):
+# 72. **Momentum Breakout Strategy**
+def define_strategy_Momentum_Breakout(data, parameters):
+# 73. **Exponential Moving Average Convergence Divergence (EMA MACD)**
+def define_strategy_EMA_MACD(data, parameters):
+# 74. **Bollinger Bands + EMA Cross**
+def define_strategy_Bollinger_EMA(data, parameters):
+# 75. **Moving Average Cross with Momentum Filter**
+def define_strategy_MA_Momentum(data, parameters):
+# 76. **Pivot Points with Stochastic Oscillator**
+def define_strategy_Pivot_Stochastic(data, parameters):
+# 77. **Volume Weighted Moving Average (VWMA)**
+def define_strategy_VWMA(data, parameters):
+# 78. **Exponential Moving Average with Momentum**
+def define_strategy_EMA_Momentum(data, parameters):
+# 79. **RSI and Moving Average**
+def define_strategy_RSI_A_MA(data, parameters):
+# 80. **Exponential Moving Average Ribbon**
+def define_strategy_EMA_Ribbon(data, parameters):
+# 81. **RSI and Moving Average Envelope**
+def define_strategy_RSI_MA_Envelope(data, parameters):
+# 82. **On-Balance Volume (OBV) with RSI**
+def define_strategy_OBV_RSI(data, parameters):
+# 83. **SuperTrend with RSI**
+def define_strategy_ATR_RSI(data, parameters):
+# 84. **Exponential Moving Average with Bollinger Bands**
+def define_strategy_EMA_Bollinger(data, parameters):
+# 85. **RSI and Moving Average Ribbon**
+def define_strategy_RSI_MA_Ribbon(data, parameters):
+# 86. **EMA Crossover with ADX Filter**
+def define_strategy_EMA_ADX(data, parameters):
+# 87. **RSI with Bollinger Bands and Momentum Filter**
+def define_strategy_RSI_Bollinger_Momentum(data, parameters):
+# 88. **Renko Box Trading Strategy**
+def define_strategy_Renko_Box_Trading(data, parameters):
+# 89. **ADX with Stochastic Oscillator**
+def define_strategy_ADX_Stochastic(data, parameters):
+# 90. **Moving Average Ribbon with ADX Filter**
+def define_strategy_MA_Ribbon_ADX(data, parameters):
+# 91. **EMA with Stochastic Oscillator**
+def define_strategy_EMA_Stochastic(data, parameters):
+# 92. **RSI with ADX Filter**
+def define_strategy_RSI_ADX(data, parameters):
+# 93. **MACD with Stochastic Oscillator**
+def define_strategy_MACD_Stochastic(data, parameters):
+# 94. **MACD with Bollinger Bands Filter**
+def define_strategy_MACD_Bollinger(data, parameters):
+# 95. **EMA Cross with Stochastic Filter**
+def define_strategy_EMA_Stochastic_Filter(data, parameters):
+# 96. **MACD with Moving Average Ribbon**
+def define_strategy_MACD_MA_Ribbon(data, parameters):
+# 97. **RSI and MACD Combo Strategy**
+def define_strategy_RSI_MACD_Combo(data, parameters):
+# 98. **Heikin Ashi Trend Continuation Strategy**
+def define_strategy_Heikin_Ashi_Trend_Continuation(data, parameters):
+# 99. **Bollinger Bands with Stochastic RSI**
+def define_strategy_Bollinger_Stochastic_RSI(data, parameters):
+# 100. **Trend Reversal with RSI**
+def define_strategy_Trend_Reversal_RSI(data, parameters):
+
+        

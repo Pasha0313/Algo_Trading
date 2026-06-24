@@ -1,0 +1,4313 @@
+{
+  "PV": {
+    "description": "SIMPLE PRICE & VOLUME STRATEGY",
+    "parameters": [
+      5,
+      95,
+      5,
+      95
+    ],
+    "param_ranges": {
+      "return_lower_percentile_range": [
+        5,
+        20,
+        5
+      ],
+      "return_upper_percentile_range": [
+        80,
+        100,
+        5
+      ],
+      "volume_lower_percentile_range": [
+        5,
+        20,
+        5
+      ],
+      "volume_upper_percentile_range": [
+        80,
+        100,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "SMA": {
+    "description": "Simple Moving Average Strategy",
+    "parameters": [
+      5,
+      20,
+      50
+    ],
+    "param_ranges": {
+      "sma_short_window_range": [
+        5,
+        20,
+        5
+      ],
+      "sma_medium_window_range": [
+        10,
+        30,
+        5
+      ],
+      "sma_long_window_range": [
+        20,
+        60,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MACD": {
+    "description": "Moving Average Convergence Divergence (MACD)",
+    "parameters": [
+      12,
+      26,
+      9
+    ],
+    "param_ranges": {
+      "macd_window_slow_range": [
+        10,
+        50,
+        5
+      ],
+      "macd_window_fast_range": [
+        5,
+        30,
+        5
+      ],
+      "macd_signal_window_range": [
+        5,
+        15,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_MA": {
+    "description": "RSI with Moving Average",
+    "parameters": [
+      14,
+      9,
+      70,
+      30
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "sma_rsi_window_range": [
+        5,
+        20,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        50,
+        100,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        0,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI": {
+    "description": "Relative Strength Index",
+    "parameters": [
+      10,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        0,
+        30,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        70,
+        100,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Stochastic_RSI": {
+    "description": "Stochastic RSI",
+    "parameters": [
+      10,
+      20,
+      0.25,
+      0.75
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochrsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Bands_ADX": {
+    "description": "Bollinger Bands with ADX Trend Filter",
+    "parameters": [
+      20,
+      2,
+      14,
+      25
+    ],
+    "param_ranges": {
+      "bollinger_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1,
+        3,
+        0.5
+      ],
+      "adx_window_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "TEMA_momentum": {
+    "description": "Triple Exponential Moving Average (TEMA) with Momentum Filter",
+    "parameters": [
+      20,
+      5,
+      0.01
+    ],
+    "param_ranges": {
+      "tema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "momentum_period_range": [
+        1,
+        10,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.01,
+        0.1,
+        0.3
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VWAP": {
+    "description": "Volume Weighted Average Price (VWAP)",
+    "parameters": [
+      14,
+      0.5
+    ],
+    "param_ranges": {
+      "vwap_window_range": [
+        10,
+        50,
+        5
+      ],
+      "vwap_offset_range": [
+        0.1,
+        2.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VWAP_momentum": {
+    "description": "Volume Weighted Average Price (VWAP) with Momentum",
+    "parameters": [
+      14,
+      0.001,
+      -0.001
+    ],
+    "param_ranges": {
+      "vwap_window_range": [
+        10,
+        50,
+        5
+      ],
+      "momentum_positive_threshold_range": [
+        0.0005,
+        0.01,
+        0.005
+      ],
+      "momentum_negative_threshold_range": [
+        -0.01,
+        -0.0005,
+        0.005
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_breakout": {
+    "description": "Bollinger Bands Breakout",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "sma_window_range": [
+        10,
+        50,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.0,
+        5.0,
+        1.0
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_squeeze": {
+    "description": "Bollinger Bands Squeeze",
+    "parameters": [
+      20,
+      2,
+      0.01
+    ],
+    "param_ranges": {
+      "sma_window_range": [
+        10,
+        50,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.0,
+        5.0,
+        1.5
+      ],
+      "squeeze_threshold_range": [
+        0.001,
+        0.05,
+        0.015
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_cross": {
+    "description": "Exponential Moving Average Cross Strategy",
+    "parameters": [
+      12,
+      25
+    ],
+    "param_ranges": {
+      "ema_short_window_range": [
+        5,
+        30,
+        5
+      ],
+      "ema_long_window_range": [
+        20,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_envelope": {
+    "description": "Exponential Moving Average Envelope",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "ema_window_range": [
+        10,
+        50,
+        5
+      ],
+      "envelope_percentage_range": [
+        1,
+        5,
+        1.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "TEMA": {
+    "description": "Triple Exponential Moving Average (TEMA)",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "tema_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Donchian": {
+    "description": "Donchian Channel",
+    "parameters": [
+      20
+    ],
+    "param_ranges": {
+      "donchian_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Aroon": {
+    "description": "Aroon Indicator",
+    "parameters": [
+      14,
+      70,
+      30
+    ],
+    "param_ranges": {
+      "aroon_window_range": [
+        10,
+        50,
+        5
+      ],
+      "aroon_up_threshold_range": [
+        50,
+        100,
+        5
+      ],
+      "aroon_down_threshold_range": [
+        0,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "WilliamsR": {
+    "description": "Williams %R",
+    "parameters": [
+      14,
+      -20,
+      -80
+    ],
+    "param_ranges": {
+      "williams_r_window_range": [
+        10,
+        30,
+        5
+      ],
+      "williams_r_overbought_threshold_range": [
+        -20,
+        0,
+        5
+      ],
+      "williams_r_oversold_threshold_range": [
+        -100,
+        -50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Elder_Ray": {
+    "description": "Elder Ray Index",
+    "parameters": [
+      13
+    ],
+    "param_ranges": {
+      "ema_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Klinger": {
+    "description": "Klinger Oscillator",
+    "parameters": [
+      34,
+      55
+    ],
+    "param_ranges": {
+      "klinger_window_fast_range": [
+        10,
+        50,
+        5
+      ],
+      "klinger_window_slow_range": [
+        20,
+        100,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "CMO": {
+    "description": "Chande Momentum Oscillator (CMO)",
+    "parameters": [
+      14,
+      -50,
+      50
+    ],
+    "param_ranges": {
+      "cmo_window_range": [
+        10,
+        30,
+        5
+      ],
+      "cmo_lower_threshold_range": [
+        -100,
+        -50,
+        5
+      ],
+      "cmo_upper_threshold_range": [
+        50,
+        100,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Price_Oscillator": {
+    "description": "Trading strategy using the Price Oscillator",
+    "parameters": [
+      12,
+      26,
+      0.5
+    ],
+    "param_ranges": {
+      "short_ema_range": [
+        5,
+        20,
+        5
+      ],
+      "long_ema_range": [
+        20,
+        50,
+        5
+      ],
+      "signal_threshold_range": [
+        0.1,
+        1.0,
+        0.1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Ultimate_Oscillator": {
+    "description": "Ultimate Oscillator",
+    "parameters": [
+      7,
+      14,
+      28,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "window1_range": [
+        5,
+        15,
+        5
+      ],
+      "window2_range": [
+        10,
+        30,
+        5
+      ],
+      "window3_range": [
+        20,
+        50,
+        5
+      ],
+      "lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Chaikin": {
+    "description": "Chaikin Oscillator",
+    "parameters": [
+      34,
+      55
+    ],
+    "param_ranges": {
+      "chaikin_window_slow_range": [
+        20,
+        60,
+        5
+      ],
+      "chaikin_window_fast_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "CMF": {
+    "description": "Chaikin Money Flow (CMF)",
+    "parameters": [
+      20,
+      0.1
+    ],
+    "param_ranges": {
+      "cmf_window_range": [
+        10,
+        50,
+        5
+      ],
+      "cmf_threshold_range": [
+        0.05,
+        0.5,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Fractal_Chaos": {
+    "description": "Fractal-based breakout strategy using Chaos Bands",
+    "parameters": [
+      20
+    ],
+    "param_ranges": {
+      "fractal_window_range": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "SuperTrend": {
+    "description": "SuperTrend",
+    "parameters": [
+      14,
+      1.5
+    ],
+    "param_ranges": {
+      "atr_window_range": [
+        10,
+        50,
+        5
+      ],
+      "supertrend_multiplier_range": [
+        1.0,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ZigZag": {
+    "description": "ZigZag Indicator",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "zigzag_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Hull_MA": {
+    "description": "Hull Moving Average",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "hull_ma_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Gann_Fan": {
+    "description": "Gann Fan",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "gann_fan_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ROC": {
+    "description": "Price Rate of Change (ROC)",
+    "parameters": [
+      14,
+      2,
+      -2
+    ],
+    "param_ranges": {
+      "roc_window_range": [
+        5,
+        30,
+        5
+      ],
+      "roc_upper_threshold_range": [
+        1,
+        10,
+        0.5
+      ],
+      "roc_lower_threshold_range": [
+        -10,
+        -1,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MFI_divergence": {
+    "description": "MFI (Money Flow Index) Divergence",
+    "parameters": [
+      14,
+      20,
+      80
+    ],
+    "param_ranges": {
+      "mfi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "mfi_lower_threshold_range": [
+        10,
+        40,
+        5
+      ],
+      "mfi_upper_threshold_range": [
+        60,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "PSAR_simple": {
+    "description": "Parabolic SAR (PSAR)",
+    "parameters": [
+      0.02,
+      0.2
+    ],
+    "param_ranges": {
+      "psar_acceleration_range": [
+        0.01,
+        0.05,
+        0.005
+      ],
+      "psar_maximum_range": [
+        0.1,
+        0.5,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "CMF_ADX": {
+    "description": "Chaikin Money Flow (CMF) with ADX",
+    "parameters": [
+      20,
+      14,
+      25
+    ],
+    "param_ranges": {
+      "cmf_window_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "PSAR_momentum": {
+    "description": "Parabolic SAR (PSAR) with Momentum",
+    "parameters": [
+      0.02,
+      0.2,
+      0.001,
+      -0.001
+    ],
+    "param_ranges": {
+      "psar_acceleration_range": [
+        0.01,
+        0.05,
+        0.01
+      ],
+      "psar_maximum_range": [
+        0.1,
+        0.5,
+        0.1
+      ],
+      "momentum_positive_threshold_range": [
+        0.0005,
+        0.01,
+        0.001
+      ],
+      "momentum_negative_threshold_range": [
+        -0.01,
+        -0.0005,
+        0.001
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Trix": {
+    "description": "Trix Indicator",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "trix_window_range": [
+        5,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Keltner_channel": {
+    "description": "Keltner Channel Breakout",
+    "parameters": [
+      14,
+      20,
+      2
+    ],
+    "param_ranges": {
+      "atr_window_range": [
+        10,
+        50,
+        10
+      ],
+      "ema_window_range": [
+        10,
+        50,
+        5
+      ],
+      "keltner_multiplier_range": [
+        1,
+        5,
+        1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Momentum": {
+    "description": "Momentum Strategy",
+    "parameters": [
+      14,
+      0.5
+    ],
+    "param_ranges": {
+      "momentum_window_range": [
+        5,
+        30,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.1,
+        2.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Ichimoku": {
+    "description": "Ichimoku Cloud",
+    "parameters": [
+      9,
+      26,
+      52
+    ],
+    "param_ranges": {
+      "conversion_line_window_range": [
+        5,
+        20,
+        5
+      ],
+      "base_line_window_range": [
+        20,
+        50,
+        5
+      ],
+      "leading_span_b_window_range": [
+        30,
+        60,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Zscore": {
+    "description": "Z-Score Mean Reversion",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "zscore_window_range": [
+        10,
+        50,
+        5
+      ],
+      "zscore_threshold_range": [
+        1,
+        3,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_envelope": {
+    "description": "Moving Average Envelope",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "sma_window_range": [
+        10,
+        50,
+        5
+      ],
+      "envelope_percentage_range": [
+        1,
+        5,
+        1.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ATR": {
+    "description": "Average True Range (ATR) Breakout",
+    "parameters": [
+      14,
+      2
+    ],
+    "param_ranges": {
+      "atr_window_range": [
+        10,
+        50,
+        5
+      ],
+      "atr_multiplier_range": [
+        1.0,
+        5.0,
+        1.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADX": {
+    "description": "Average Directional Index (ADX)",
+    "parameters": [
+      14,
+      25,
+      20
+    ],
+    "param_ranges": {
+      "adx_window_range": [
+        10,
+        50,
+        5
+      ],
+      "adx_upper_threshold_range": [
+        20,
+        50,
+        5
+      ],
+      "adx_lower_threshold_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "CCI": {
+    "description": "Commodity Channel Index (CCI)",
+    "parameters": [
+      20,
+      100
+    ],
+    "param_ranges": {
+      "cci_window_range": [
+        10,
+        50,
+        5
+      ],
+      "cci_threshold_range": [
+        50,
+        200,
+        50
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Linear_Regression": {
+    "description": "Linear Regression Channel",
+    "parameters": [
+      14,
+      2
+    ],
+    "param_ranges": {
+      "linear_regression_window_range": [
+        10,
+        50,
+        5
+      ],
+      "band_width_range": [
+        1,
+        5,
+        1.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VWMA_Price_Oscillator": {
+    "description": "Volume Weighted Moving Average (VWMA) with Price Oscillator",
+    "parameters": [
+      20,
+      12,
+      26
+    ],
+    "param_ranges": {
+      "vwma_window_range": [
+        10,
+        50,
+        5
+      ],
+      "price_oscillator_fast_window_range": [
+        5,
+        15,
+        3
+      ],
+      "price_oscillator_slow_window_range": [
+        15,
+        40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Dynamic_Pivot_Points": {
+    "description": "Dynamic Pivot Points Classic Strategy",
+    "parameters": [
+      1.0,
+      20
+    ],
+    "param_ranges": {
+      "pivot_multiplier_range": [
+        1.0,
+        2.0,
+        0.5
+      ],
+      "pivot_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Force_Index": {
+    "description": "Force Index",
+    "parameters": [
+      13
+    ],
+    "param_ranges": {
+      "force_index_window_range": [
+        10,
+        20,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Chandelier_Exit": {
+    "description": "Chandelier Exit",
+    "parameters": [
+      14,
+      3
+    ],
+    "param_ranges": {
+      "atr_window_range": [
+        10,
+        20,
+        5
+      ],
+      "chandelier_multiplier_range": [
+        1.5,
+        5.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Fibonacci": {
+    "description": "Fibonacci",
+    "parameters": [
+      20
+    ],
+    "param_ranges": {
+      "fibonacci_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADL": {
+    "description": "Accumulation/Distribution Line (A/D Line)",
+    "parameters": [
+      1000,
+      -1000
+    ],
+    "param_ranges": {
+      "adl_upper_threshold_range": [
+        500,
+        2000,
+        100
+      ],
+      "adl_lower_threshold_range": [
+        -2000,
+        -500,
+        100
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_Bollinger": {
+    "description": "RSI with Bollinger Bands",
+    "parameters": [
+      14,
+      20,
+      2,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Turtle_Trading": {
+    "description": "Turtle Trading",
+    "parameters": [
+      20,
+      20
+    ],
+    "param_ranges": {
+      "high_max_window_range": [
+        10,
+        30,
+        5
+      ],
+      "low_min_window_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Mean_Reversion": {
+    "description": "Mean Reversion Strategy",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "mean_window_range": [
+        10,
+        30,
+        5
+      ],
+      "std_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Breakout": {
+    "description": "Breakout Strategy",
+    "parameters": [
+      20,
+      20
+    ],
+    "param_ranges": {
+      "high_window_range": [
+        10,
+        30,
+        5
+      ],
+      "low_window_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_Divergence": {
+    "description": "RSI Divergence Strategy",
+    "parameters": [
+      14,
+      5,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_signal_window_range": [
+        3,
+        10,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_Cross_RSI": {
+    "description": "Moving Average Cross with RSI Filter",
+    "parameters": [
+      10,
+      30,
+      14,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "sma_short_window_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_long_window_range": [
+        20,
+        50,
+        5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADX_MA": {
+    "description": "ADX with Moving Averages",
+    "parameters": [
+      14,
+      10,
+      30,
+      25,
+      20
+    ],
+    "param_ranges": {
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "sma_short_window_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_long_window_range": [
+        20,
+        50,
+        5
+      ],
+      "adx_upper_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "adx_lower_threshold_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Breakout_Momentum": {
+    "description": "Bollinger Bands Breakout with Momentum Oscillator",
+    "parameters": [
+      20,
+      2,
+      14
+    ],
+    "param_ranges": {
+      "bollinger_window_range": [
+        10,
+        50,
+        5
+      ],
+      "bollinger_deviation_range": [
+        1.5,
+        3,
+        0.5
+      ],
+      "momentum_window_range": [
+        5,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Fibonacci_MA": {
+    "description": "Fibonacci Retracement with Moving Average Filter",
+    "parameters": [
+      20,
+      50
+    ],
+    "param_ranges": {
+      "fibonacci_window_range": [
+        10,
+        50,
+        5
+      ],
+      "ma_window_range": [
+        20,
+        200,
+        10
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Mean_Variance_Optimization": {
+    "description": "Mean-Variance Optimization Strategy",
+    "parameters": [
+      20,
+      20,
+      1.5
+    ],
+    "param_ranges": {
+      "mean_window_range": [
+        10,
+        30,
+        5
+      ],
+      "variance_window_range": [
+        10,
+        30,
+        5
+      ],
+      "variance_multiplier_range": [
+        1.0,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_ribbon": {
+    "description": "Moving Average Ribbon",
+    "parameters": [
+      10,
+      30
+    ],
+    "param_ranges": {
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_long_range": [
+        20,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADX_DI": {
+    "description": "ADX + DI (Directional Indicators)",
+    "parameters": [
+      14,
+      25
+    ],
+    "param_ranges": {
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MACD_RSI": {
+    "description": "MACD Histogram with RSI",
+    "parameters": [
+      26,
+      12,
+      9,
+      14,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "macd_signal_range": [
+        5,
+        15,
+        5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Fibonacci_retracement": {
+    "description": "Fibonacci Retracement Strategy",
+    "parameters": [
+      20
+    ],
+    "param_ranges": {
+      "fibonacci_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_trend_reversal": {
+    "description": "Relative Strength Index (RSI) Trend Reversal Strategy",
+    "parameters": [
+      14,
+      20,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "CMO_EMA": {
+    "description": "Chande Momentum Oscillator with EMA",
+    "parameters": [
+      14,
+      20,
+      50,
+      -50
+    ],
+    "param_ranges": {
+      "cmo_window_range": [
+        10,
+        20,
+        5
+      ],
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "cmo_upper_threshold_range": [
+        40,
+        60,
+        5
+      ],
+      "cmo_lower_threshold_range": [
+        -60,
+        -40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_momentum": {
+    "description": "Moving Average Cross with Momentum",
+    "parameters": [
+      10,
+      30,
+      5,
+      0.5,
+      -0.5
+    ],
+    "param_ranges": {
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_long_range": [
+        20,
+        40,
+        5
+      ],
+      "momentum_window_range": [
+        3,
+        10,
+        3
+      ],
+      "momentum_upper_threshold_range": [
+        0.1,
+        1.0,
+        0.5
+      ],
+      "momentum_lower_threshold_range": [
+        -1.0,
+        -0.1,
+        0.3
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_Stochastic": {
+    "description": "RSI and Stochastic Oscillator",
+    "parameters": [
+      10,
+      10,
+      30,
+      20,
+      70,
+      80
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "stochastic_lower_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ],
+      "stochastic_upper_threshold_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Garman_Klass": {
+    "description": "Garman-Klass Volatility Strategy",
+    "parameters": [
+      1.5
+    ],
+    "param_ranges": {
+      "volatility_threshold_multiplier_range": [
+        1.0,
+        3.0,
+        0.1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Momentum_MACD": {
+    "description": "Momentum Oscillator with MACD",
+    "parameters": [
+      5,
+      26,
+      12,
+      0.5,
+      0.5
+    ],
+    "param_ranges": {
+      "momentum_window_range": [
+        3,
+        10,
+        3
+      ],
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "momentum_upper_threshold_range": [
+        0.1,
+        1.0,
+        0.3
+      ],
+      "momentum_lower_threshold_range": [
+        0.1,
+        1.0,
+        0.3
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Stochastic": {
+    "description": "Bollinger Bands with Stochastic Oscillator",
+    "parameters": [
+      25,
+      1.5,
+      10,
+      25,
+      70
+    ],
+    "param_ranges": {
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_lower_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "stochastic_upper_threshold_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Momentum_Breakout": {
+    "description": "Momentum Breakout Strategy",
+    "parameters": [
+      10,
+      0.05
+    ],
+    "param_ranges": {
+      "momentum_window_range": [
+        5,
+        20,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.01,
+        0.1,
+        0.03
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_MACD": {
+    "description": "Exponential Moving Average Convergence Divergence (EMA MACD)",
+    "parameters": [
+      12,
+      26,
+      0.5,
+      0.5
+    ],
+    "param_ranges": {
+      "ema_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "ema_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_upper_threshold_range": [
+        0.1,
+        1.0,
+        0.3
+      ],
+      "macd_lower_threshold_range": [
+        0.1,
+        1.0,
+        0.3
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_EMA": {
+    "description": "Bollinger Bands + EMA Cross",
+    "parameters": [
+      20,
+      2,
+      10
+    ],
+    "param_ranges": {
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "ema_window_range": [
+        5,
+        15,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_Momentum": {
+    "description": "Moving Average Cross with Momentum Filter",
+    "parameters": [
+      10,
+      30,
+      5,
+      0.01
+    ],
+    "param_ranges": {
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_long_range": [
+        20,
+        40,
+        5
+      ],
+      "momentum_period_range": [
+        3,
+        10,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.005,
+        0.02,
+        0.005
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Pivot_Stochastic": {
+    "description": "Pivot Points with Stochastic Oscillator",
+    "parameters": [
+      14,
+      20,
+      80
+    ],
+    "param_ranges": {
+      "stochastic_window_range": [
+        5,
+        20,
+        5
+      ],
+      "oversold_threshold_range": [
+        0,
+        50,
+        5
+      ],
+      "overbought_threshold_range": [
+        50,
+        100,
+        10
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VWMA": {
+    "description": "Volume Weighted Moving Average (VWMA)",
+    "parameters": [
+      20
+    ],
+    "param_ranges": {
+      "vwma_window_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_Momentum": {
+    "description": "Exponential Moving Average with Momentum",
+    "parameters": [
+      20,
+      5,
+      0.01
+    ],
+    "param_ranges": {
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "momentum_period_range": [
+        3,
+        10,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.005,
+        0.02,
+        0.005
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_A_MA": {
+    "description": "RSI and Moving Average",
+    "parameters": [
+      14,
+      20,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_Ribbon": {
+    "description": "Exponential Moving Average Ribbon",
+    "parameters": [
+      10,
+      20,
+      50
+    ],
+    "param_ranges": {
+      "ema_short_range": [
+        5,
+        15,
+        5
+      ],
+      "ema_medium_range": [
+        15,
+        30,
+        5
+      ],
+      "ema_long_range": [
+        40,
+        60,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_MA_Envelope": {
+    "description": "RSI and Moving Average Envelope",
+    "parameters": [
+      14,
+      20,
+      2,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "envelope_percentage_range": [
+        1,
+        5,
+        0.5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "OBV_RSI": {
+    "description": "On-Balance Volume (OBV) with RSI",
+    "parameters": [
+      14,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ATR_RSI": {
+    "description": "ATR with RSI",
+    "parameters": [
+      14,
+      3,
+      14,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "ATR_window_range": [
+        10,
+        20,
+        5
+      ],
+      "ATR_multiplier_range": [
+        1.5,
+        5.0,
+        0.5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_Bollinger": {
+    "description": "Exponential Moving Average with Bollinger Bands",
+    "parameters": [
+      20,
+      20,
+      2
+    ],
+    "param_ranges": {
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_MA_Ribbon": {
+    "description": "RSI and Moving Average Ribbon",
+    "parameters": [
+      14,
+      10,
+      20,
+      50,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_medium_range": [
+        15,
+        30,
+        5
+      ],
+      "sma_long_range": [
+        40,
+        60,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_ADX": {
+    "description": "EMA Crossover with ADX Filtery",
+    "parameters": [
+      12,
+      26,
+      14,
+      25
+    ],
+    "param_ranges": {
+      "ema_short_range": [
+        5,
+        20,
+        5
+      ],
+      "ema_long_range": [
+        20,
+        50,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_Bollinger_Momentum": {
+    "description": "RSI with Bollinger Bands and Momentum Filter",
+    "parameters": [
+      14,
+      20,
+      2,
+      5,
+      30,
+      0.01,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "momentum_period_range": [
+        3,
+        10,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "momentum_threshold_range": [
+        0.005,
+        0.02,
+        0.005
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Renko_Box": {
+    "description": "Simple Renko Box trading strategy using fixed box size",
+    "parameters": [
+      10
+    ],
+    "param_ranges": {
+      "box_size_range": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADX_Stochastic": {
+    "description": "ADX with Stochastic Oscillatory",
+    "parameters": [
+      15,
+      10,
+      20,
+      25,
+      25,
+      70
+    ],
+    "param_ranges": {
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_upper_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "stochastic_lower_bound_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_lower_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "stochastic_upper_bound_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MA_Ribbon_ADX": {
+    "description": "Moving Average Ribbon with ADX Filter",
+    "parameters": [
+      10,
+      20,
+      50,
+      14,
+      25,
+      20
+    ],
+    "param_ranges": {
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_medium_range": [
+        15,
+        30,
+        5
+      ],
+      "sma_long_range": [
+        40,
+        60,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_upper_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "adx_lower_threshold_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_Stochastic": {
+    "description": "EMA with Stochastic Oscillator",
+    "parameters": [
+      14,
+      14,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_lower_bound_range": [
+        10,
+        30,
+        5
+      ],
+      "stochastic_upper_bound_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_ADX": {
+    "description": "RSI with ADX Filter",
+    "parameters": [
+      14,
+      14,
+      30,
+      25,
+      70,
+      20
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "adx_upper_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ],
+      "adx_lower_threshold_range": [
+        10,
+        30,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MACD_Stochastic": {
+    "description": "MACD with Stochastic Oscillator",
+    "parameters": [
+      45,
+      15,
+      10,
+      0.1,
+      25,
+      0.1,
+      70
+    ],
+    "param_ranges": {
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "macd_upper_threshold_range": [
+        0.1,
+        1.0,
+        0.5
+      ],
+      "stochastic_lower_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "macd_lower_threshold_range": [
+        0.1,
+        1.0,
+        0.5
+      ],
+      "stochastic_upper_threshold_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MACD_Bollinger": {
+    "description": "MACD with Bollinger Bands Filter",
+    "parameters": [
+      26,
+      12,
+      9,
+      20,
+      2
+    ],
+    "param_ranges": {
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "macd_signal_range": [
+        5,
+        15,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_Stochastic_Filter": {
+    "description": "EMA Cross with Stochastic Filter",
+    "parameters": [
+      10,
+      30,
+      14,
+      20,
+      80
+    ],
+    "param_ranges": {
+      "ema_short_range": [
+        5,
+        15,
+        5
+      ],
+      "ema_long_range": [
+        20,
+        50,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_lower_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "stochastic_upper_threshold_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "MACD_MA_Ribbon": {
+    "description": "MACD with Moving Average Ribbon",
+    "parameters": [
+      26,
+      12,
+      10,
+      20,
+      50
+    ],
+    "param_ranges": {
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "sma_short_range": [
+        5,
+        15,
+        5
+      ],
+      "sma_medium_range": [
+        15,
+        30,
+        5
+      ],
+      "sma_long_range": [
+        40,
+        60,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "RSI_MACD_Combo": {
+    "description": "RSI and MACD Combo Strategy",
+    "parameters": [
+      10,
+      40,
+      15,
+      35,
+      60
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "macd_slow_range": [
+        20,
+        50,
+        5
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Heikin_Ashi_Trend": {
+    "description": "Heikin Ashi Trend Continuation Strategy",
+    "parameters": [
+      14,
+      14,
+      25
+    ],
+    "param_ranges": {
+      "sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        30,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        40,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Stochastic_RSI": {
+    "description": "Bollinger Bands with Stochastic RSI",
+    "parameters": [
+      15,
+      1.5,
+      15,
+      15,
+      0.2,
+      0.7
+    ],
+    "param_ranges": {
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Trend_Reversal_RSI": {
+    "description": "Trend Reversal with RSI",
+    "parameters": [
+      14,
+      20,
+      30,
+      70
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "rsi_lower_threshold_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_threshold_range": [
+        60,
+        80,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Volume_Profile": {
+    "description": "Volume Profile Strategy",
+    "parameters": [
+      50,
+      75,
+      25
+    ],
+    "param_ranges": {
+      "price_range_bins": [
+        10,
+        100,
+        10
+      ],
+      "upper_percentile_threshold": [
+        50,
+        95,
+        5
+      ],
+      "lower_percentile_threshold": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Grid_Trading": {
+    "description": "Grid Trading Strategy",
+    "parameters": [
+      10,
+      10
+    ],
+    "param_ranges": {
+      "grid_size_range": [
+        5,
+        50,
+        5
+      ],
+      "num_levels_range": [
+        5,
+        20,
+        1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA_MACD_ADX": {
+    "description": "EMA + MACD + ADX Hybrid Strategy",
+    "parameters": [
+      15,
+      50,
+      5,
+      40,
+      5,
+      15,
+      20
+    ],
+    "param_ranges": {
+      "ema_short_range": [
+        14,
+        20,
+        3
+      ],
+      "ema_long_range": [
+        30,
+        70,
+        20
+      ],
+      "macd_fast_range": [
+        5,
+        10,
+        3
+      ],
+      "macd_slow_range": [
+        20,
+        50,
+        20
+      ],
+      "macd_signal_range": [
+        5,
+        10,
+        4
+      ],
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_threshold_range": [
+        20,
+        40,
+        15
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Trend_Momentum_Volatility": {
+    "description": "5-min timeframe hybrid strategy combining trend detection, momentum confirmation, and volatility filtering.",
+    "parameters": [
+      15,
+      70,
+      15,
+      40,
+      5,
+      20,
+      10,
+      10,
+      0.1
+    ],
+    "param_ranges": {
+      "ema_short_range": [
+        5,
+        20,
+        5
+      ],
+      "ema_long_range": [
+        30,
+        100,
+        20
+      ],
+      "macd_fast_range": [
+        5,
+        20,
+        5
+      ],
+      "macd_slow_range": [
+        20,
+        50,
+        10
+      ],
+      "macd_signal_range": [
+        5,
+        15,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        30,
+        5
+      ],
+      "atr_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "atr_threshold_range": [
+        0.1,
+        2.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Stochastic_RSI_Bollinger_VWAP": {
+    "description": "Stochastic RSI Bollinger Bands with VWAP",
+    "parameters": [
+      10,
+      15,
+      10,
+      1.5,
+      30,
+      0.1,
+      0.7,
+      0.1
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "vwap_window_range": [
+        10,
+        50,
+        10
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ],
+      "vwap_offset_range": [
+        0.1,
+        2.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Stochastic_RSI_FULL": {
+    "description": "Stochastic RSI with %K and %D smoothing",
+    "parameters": [
+      15,
+      15,
+      2,
+      2,
+      0.3,
+      0.7
+    ],
+    "param_ranges": {
+      "rsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_k_smoothing_range": [
+        3,
+        5,
+        1
+      ],
+      "stochrsi_d_smoothing_range": [
+        3,
+        5,
+        1
+      ],
+      "stochrsi_lower_threshold_range": [
+        0.1,
+        0.35,
+        0.05
+      ],
+      "stochrsi_upper_threshold_range": [
+        0.65,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Gaussian_Channel_FULL": {
+    "description": "Gaussian Channel Strategy with dynamic upper and lower bands based on Gaussian smoothing.",
+    "parameters": [
+      10,
+      4,
+      1.0,
+      1.0
+    ],
+    "param_ranges": {
+      "window_size_range": [
+        10,
+        50,
+        5
+      ],
+      "sigma_range": [
+        1,
+        5,
+        1
+      ],
+      "upper_band_multiplier_range": [
+        1,
+        3,
+        0.5
+      ],
+      "lower_band_multiplier_range": [
+        1,
+        3,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Combined_Gaussian_Stochastic_RSI_FULL": {
+    "description": "Combined Gaussian Channel and Stochastic RSI Strategy.",
+    "parameters": [
+      10,
+      2,
+      1.5,
+      1.5,
+      10,
+      10,
+      1,
+      1,
+      0.2,
+      0.7
+    ],
+    "param_ranges": {
+      "gaussian_window_range": [
+        10,
+        30,
+        10
+      ],
+      "gaussian_sigma_range": [
+        1,
+        3,
+        1
+      ],
+      "upper_band_multiplier_range": [
+        1,
+        2,
+        0.5
+      ],
+      "lower_band_multiplier_range": [
+        1,
+        2,
+        0.5
+      ],
+      "rsi_window_range": [
+        5,
+        15,
+        5
+      ],
+      "stochrsi_window_range": [
+        5,
+        15,
+        5
+      ],
+      "k_smoothing_range": [
+        1,
+        3,
+        3
+      ],
+      "d_smoothing_range": [
+        1,
+        3,
+        3
+      ],
+      "lower_threshold_range": [
+        0.2,
+        0.35,
+        0.05
+      ],
+      "upper_threshold_range": [
+        0.65,
+        0.8,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "OBV": {
+    "description": "On-Balance Volume (OBV) Strategy",
+    "parameters": [
+      1
+    ],
+    "param_ranges": {
+      "Fake_ranges": [
+        1,
+        5,
+        1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Volume_delta": {
+    "description": "Volume Delta Strategy",
+    "parameters": [
+      1
+    ],
+    "param_ranges": {
+      "Fake_ranges": [
+        1,
+        5,
+        1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Ease_of_Movement": {
+    "description": "Ease of Movement Strategy",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "Ease_of_Movement_window_range": [
+        10,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "WMA": {
+    "description": "Weighted Moving Average (WMA) Strategy",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "wma_period_range": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "EMA": {
+    "description": "Exponential Moving Average (EMA) Strategy",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "ema_period_range": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "DEMA": {
+    "description": "Double Exponential Moving Average (DEMA) Strategy",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "dema_period_range": [
+        5,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "AMA": {
+    "description": "Adaptive Moving Average (AMA/KAMA) Strategy",
+    "parameters": [
+      10,
+      2,
+      30
+    ],
+    "param_ranges": {
+      "ama_period_range": [
+        5,
+        50,
+        5
+      ],
+      "fast_ema_range": [
+        2,
+        10,
+        2
+      ],
+      "slow_ema_range": [
+        20,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VIDYA": {
+    "description": "Variable Index Dynamic Average (VIDYA) Strategy",
+    "parameters": [
+      14,
+      10
+    ],
+    "param_ranges": {
+      "vidya_period_range": [
+        5,
+        50,
+        5
+      ],
+      "volatility_period_range": [
+        5,
+        20,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "SMA_cross": {
+    "description": "Simple Moving Average Cross Strategy",
+    "parameters": [
+      12,
+      25
+    ],
+    "param_ranges": {
+      "sma_short_window_range": [
+        5,
+        30,
+        5
+      ],
+      "sma_long_window_range": [
+        20,
+        50,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Stochastic": {
+    "description": "Stochastic Oscillator Strategy with Thresholds",
+    "parameters": [
+      14,
+      3,
+      3,
+      20,
+      80
+    ],
+    "param_ranges": {
+      "stoch_k_window_range": [
+        5,
+        20,
+        1
+      ],
+      "stoch_smooth_window_range": [
+        1,
+        5,
+        1
+      ],
+      "stoch_d_window_range": [
+        1,
+        5,
+        1
+      ],
+      "oversold_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "overbought_threshold_range": [
+        70,
+        90,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "AO": {
+    "description": "Awesome Oscillator Strategy",
+    "parameters": [
+      5,
+      34,
+      0
+    ],
+    "param_ranges": {
+      "ao_short_window_range": [
+        3,
+        10,
+        1
+      ],
+      "ao_long_window_range": [
+        20,
+        50,
+        5
+      ],
+      "ao_threshold_range": [
+        -0.5,
+        0.5,
+        0.1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "KST": {
+    "description": "Know Sure Thing (KST) Strategy",
+    "parameters": [
+      10,
+      15,
+      20,
+      30,
+      9,
+      0
+    ],
+    "param_ranges": {
+      "kst_roc1_window_range": [
+        5,
+        15,
+        3
+      ],
+      "kst_roc2_window_range": [
+        10,
+        20,
+        2
+      ],
+      "kst_roc3_window_range": [
+        15,
+        25,
+        5
+      ],
+      "kst_roc4_window_range": [
+        20,
+        40,
+        10
+      ],
+      "kst_signal_window_range": [
+        5,
+        15,
+        5
+      ],
+      "kst_threshold_range": [
+        -0.5,
+        0.5,
+        0.2
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_SMA": {
+    "description": "Bollinger Bands with SMA Strategy",
+    "parameters": [
+      20,
+      2
+    ],
+    "param_ranges": {
+      "sma_window_range": [
+        10,
+        50,
+        5
+      ],
+      "std_dev_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Keltner_Squeeze": {
+    "description": "Bollinger Bands & Keltner Channel Squeeze Strategy",
+    "parameters": [
+      20,
+      2,
+      20,
+      1.5
+    ],
+    "param_ranges": {
+      "bb_window_range": [
+        10,
+        50,
+        5
+      ],
+      "bb_std_dev_multiplier_range": [
+        1.5,
+        3.0,
+        0.5
+      ],
+      "kc_window_range": [
+        10,
+        50,
+        5
+      ],
+      "kc_atr_multiplier_range": [
+        1.0,
+        2.5,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "StdDev_Channel": {
+    "description": "Standard Deviation Channel Strategy",
+    "parameters": [
+      40,
+      1
+    ],
+    "param_ranges": {
+      "channel_window_range": [
+        10,
+        50,
+        5
+      ],
+      "std_dev_multiplier_range": [
+        1.0,
+        3.0,
+        0.5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "HV": {
+    "description": "Historical Volatility (HV) Strategy",
+    "parameters": [
+      20,
+      0.3,
+      0.1
+    ],
+    "param_ranges": {
+      "hv_window_range": [
+        10,
+        50,
+        5
+      ],
+      "hv_threshold_high_range": [
+        0.2,
+        0.5,
+        0.05
+      ],
+      "hv_threshold_low_range": [
+        0.05,
+        0.2,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "VR": {
+    "description": "Volatility Ratio (VR) Strategy",
+    "parameters": [
+      10,
+      50,
+      1.5,
+      0.5
+    ],
+    "param_ranges": {
+      "vr_short_window_range": [
+        5,
+        20,
+        1
+      ],
+      "vr_long_window_range": [
+        30,
+        100,
+        5
+      ],
+      "vr_threshold_high_range": [
+        1.2,
+        2.0,
+        0.1
+      ],
+      "vr_threshold_low_range": [
+        0.3,
+        1.0,
+        0.1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Simple_Pivot_Points": {
+    "description": "Simple_Pivot_Points Strategy",
+    "parameters": [
+      1
+    ],
+    "param_ranges": {
+      "Fake_ranges": [
+        1,
+        5,
+        1
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "DI": {
+    "description": "Directional Indicator (DI-Only) Strategy",
+    "parameters": [
+      14
+    ],
+    "param_ranges": {
+      "di_window_range": [
+        10,
+        30,
+        2
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Stochastic_RSI_StdDev_Channel": {
+    "description": "Stochastic RSI with Standard Deviation Channel Strategy",
+    "parameters": [
+      40,
+      1,
+      10,
+      20,
+      0.3,
+      0.7
+    ],
+    "param_ranges": {
+      "channel_window_range": [
+        10,
+        50,
+        10
+      ],
+      "std_dev_multiplier_range": [
+        1.0,
+        3.0,
+        1
+      ],
+      "rsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_window_range": [
+        10,
+        30,
+        5
+      ],
+      "stochrsi_lower_threshold_range": [
+        0.2,
+        0.3,
+        0.05
+      ],
+      "stochrsi_upper_threshold_range": [
+        0.7,
+        0.8,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Bollinger_Stochastic_RSI_Modified": {
+    "description": "Bollinger Bands with Stochastic RSI Modified",
+    "parameters": [
+      10,
+      1.75,
+      10,
+      10,
+      1,
+      0.25,
+      0.75
+    ],
+    "param_ranges": {
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.0,
+        2.0,
+        0.25
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_rsi_smoothing": [
+        1,
+        5,
+        1
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Keltner_Stochastic_RSI": {
+    "description": "Keltner Channel with Stochastic RSI",
+    "parameters": [
+      10,
+      10,
+      1.5,
+      10,
+      10,
+      1,
+      0.2,
+      0.7
+    ],
+    "param_ranges": {
+      "keltner_atr_window_range": [
+        10,
+        30,
+        5
+      ],
+      "keltner_ema_window_range": [
+        10,
+        30,
+        5
+      ],
+      "keltner_multiplier_range": [
+        1.0,
+        2.0,
+        0.5
+      ],
+      "rsi_window_range": [
+        5,
+        15,
+        5
+      ],
+      "stochastic_window_range": [
+        5,
+        15,
+        5
+      ],
+      "stochastic_rsi_smoothing_range": [
+        1,
+        5,
+        5
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "HMA_Stochastic_RSI": {
+    "description": "Hull Moving Average Channel with Stochastic RSI",
+    "parameters": [
+      10,
+      10,
+      2,
+      10,
+      10,
+      1,
+      0.2,
+      0.7
+    ],
+    "param_ranges": {
+      "hma_window_range": [
+        10,
+        30,
+        10
+      ],
+      "hma_std_window_range": [
+        10,
+        30,
+        10
+      ],
+      "hma_multiplier_range": [
+        1.0,
+        2.0,
+        0.5
+      ],
+      "rsi_window_range": [
+        5,
+        15,
+        5
+      ],
+      "stochastic_window_range": [
+        5,
+        15,
+        5
+      ],
+      "stochastic_rsi_smoothing_range": [
+        1,
+        5,
+        5
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "ADX_ATR_Bollinger_Stochastic_RSI": {
+    "description": "Bollinger Bands with Stochastic RSI, ADX, and ATR Filtering",
+    "parameters": [
+      10,
+      10,
+      1.5,
+      10,
+      10,
+      2,
+      0.25,
+      0.75,
+      10,
+      1,
+      0.0001,
+      0.005
+    ],
+    "param_ranges": {
+      "adx_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_sma_window_range": [
+        10,
+        30,
+        5
+      ],
+      "bollinger_multiplier_range": [
+        1.0,
+        2.5,
+        0.25
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_rsi_smoothing": [
+        1,
+        3,
+        1
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.1,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.9,
+        0.05
+      ],
+      "atr_window_range": [
+        5,
+        20,
+        5
+      ],
+      "adx_threshold_range": [
+        10,
+        30,
+        5
+      ],
+      "atr_threshold_range": [
+        0.0005,
+        0.002,
+        0.0005
+      ],
+      "bollinger_bandwidth_threshold_range": [
+        0.005,
+        0.02,
+        0.005
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Supertrend_Stochastic_RSI": {
+    "description": "Supertrend Channel with Stochastic RSI",
+    "parameters": [
+      10,
+      1.0,
+      15,
+      10,
+      1,
+      0.25,
+      0.75
+    ],
+    "param_ranges": {
+      "supertrend_period_range": [
+        5,
+        20,
+        5
+      ],
+      "supertrend_multiplier_range": [
+        1.0,
+        3.0,
+        0.5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_window_range": [
+        10,
+        20,
+        5
+      ],
+      "stochastic_rsi_smoothing": [
+        1,
+        3,
+        1
+      ],
+      "stochastic_rsi_lower_threshold_range": [
+        0.15,
+        0.3,
+        0.05
+      ],
+      "stochastic_rsi_upper_threshold_range": [
+        0.7,
+        0.85,
+        0.05
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  },
+  "Trend_Momentum_RSI_Volatility": {
+    "description": "EMA + MACD + ADX + RSI + ATR hybrid strategy",
+    "parameters": [
+      9,
+      21,
+      12,
+      26,
+      9,
+      14,
+      20,
+      14,
+      30,
+      70,
+      14
+    ],
+    "param_ranges": {
+      "ema_fast_range": [
+        5,
+        15,
+        5
+      ],
+      "ema_slow_range": [
+        20,
+        50,
+        10
+      ],
+      "macd_fast_range": [
+        5,
+        15,
+        5
+      ],
+      "macd_slow_range": [
+        20,
+        40,
+        10
+      ],
+      "macd_signal_range": [
+        5,
+        15,
+        5
+      ],
+      "adx_window_range": [
+        10,
+        20,
+        5
+      ],
+      "adx_threshold_range": [
+        15,
+        40,
+        5
+      ],
+      "rsi_window_range": [
+        10,
+        20,
+        5
+      ],
+      "rsi_lower_range": [
+        20,
+        40,
+        5
+      ],
+      "rsi_upper_range": [
+        60,
+        80,
+        5
+      ],
+      "atr_window_range": [
+        10,
+        20,
+        5
+      ]
+    },
+      "risk_param_ranges": {
+       "stop_loss_pct": [0.01, 0.04, 0.02],
+       "take_profit_pct": [0.05, 0.15, 0.04]
+    }
+  }
+}

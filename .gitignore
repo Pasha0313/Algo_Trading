@@ -1,0 +1,20 @@
+﻿# Sensitive files
+KEY.txt
+Pass.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS
+desktop.ini
+.DS_Store
+Thumbs.db

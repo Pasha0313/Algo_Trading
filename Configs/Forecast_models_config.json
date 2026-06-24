@@ -1,0 +1,108 @@
+{
+    "ARIMA": {
+      "description": "Auto-Regressive Integrated Moving Average (ARIMA)",
+      "parameters": {
+        "p": 7,  
+        "d": 2,   
+        "q": 5,  
+        "trend_range": "n"
+      }, 
+      "param_ranges": {
+        "p_range": [0, 5, 1], 
+        "d_range": [0, 2, 1],
+        "q_range": [0, 5, 1],
+        "trend_range": ["n"]
+      }
+    },
+    "Prophet": {
+      "description": "Prophet Model for Time Series Forecasting",
+      "parameters": {
+        "seasonality_mode": "additive",  
+        "changepoint_prior_scale": 0.19,   
+        "seasonality_prior_scale": 1.0,
+        "yearly_seasonality": true,  
+        "weekly_seasonality": true
+      },
+      "param_ranges": {
+        "seasonality_mode_range": ["additive", "multiplicative"],
+        "changepoint_prior_scale_range": [0.01, 0.5, 0.01],
+        "seasonality_prior_scale_range": [1.0, 20.0, 1.0]
+      }
+    },
+    "Exponential_Smoothing": {
+      "description": "Exponential Smoothing (Holt-Winters) Model",
+      "parameters": {
+        "trend": "additive",   
+        "seasonal": "additive",   
+        "seasonal_periods": 12   
+      },
+      "param_ranges": {
+        "trend_range": ["additive", "multiplicative"],
+        "seasonal_range": ["additive", "multiplicative"],
+        "seasonal_periods_range": [6, 24, 1]
+      }
+    },
+    "XGBoost": {
+      "description": "XGBoost Regressor for Time Series",
+      "parameters": {
+        "n_estimators": 100,   
+        "max_depth": 3,   
+        "learning_rate": 0.1   
+      },
+      "param_ranges": {
+        "n_estimators_range": [50, 300, 50],
+        "max_depth_range": [3, 10, 1],
+        "learning_rate_range": [0.01, 0.5, 0.05]
+      }
+    },
+    "Gaussian": {
+      "description": "Gaussian Process Regressor for Time Series",
+      "parameters": {
+        "kernel": "RBF",   
+        "alpha": 1e-2   
+      },
+      "param_ranges": {
+        "kernel_range": ["RBF", "Matern", "RationalQuadratic"],
+        "alpha_range": [1e-4, 1e-1, 1e-3]
+      }
+    },
+    "LSTM": {
+      "description": "LSTM Model for Time Series Forecasting",
+      "parameters": {
+        "n_steps": 90,
+        "n_units": 110,
+        "dropout_rate": 0.4,
+        "epochs": 70,
+        "batch_size": 16,
+        "optimizer": "adam"
+      },
+      "param_ranges": {
+        "n_steps_range": [10, 100, 40],
+        "n_units_range": [10, 200, 50],
+        "dropout_rate_range": [0.1, 0.5, 0.15],
+        "epochs_range": [10, 100, 30],
+        "batch_size_range": [16, 128, 32],
+        "optimizer_range": ["adam", "rmsprop", "sgd"]
+      }
+    },
+    "GRU": {
+        "description": "GRU Model for Time Series Forecasting",
+        "parameters": {
+            "n_steps": 60,
+            "n_units": 100,
+            "dropout_rate": 0.3,
+            "epochs": 50,
+            "batch_size": 32,
+            "optimizer": "adam"
+        },
+        "param_ranges": {
+            "n_steps_range": [10, 100, 40],       
+            "n_units_range": [10, 200, 50],      
+            "dropout_rate_range": [0.1, 0.5, 0.15],  
+            "epochs_range": [10, 100, 30],       
+            "batch_size_range": [16, 128, 32],   
+            "optimizer_range": ["adam", "rmsprop", "sgd"]  
+        }
+    }
+  }
+  

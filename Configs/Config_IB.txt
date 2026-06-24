@@ -1,0 +1,93 @@
+########################################
+############     Control     ###########
+########################################
+Perform_BackTesting = True
+Print_Data      = False
+Perform_Trading = False
+
+########################################
+############      Main       ###########
+########################################
+symbol     = XAUUSD
+asset_type = CMDTY
+secType    = CFD
+timezone   = US/Eastern
+expiry     = None
+exchange   = SMART
+currency   = USD
+bar_length = 5 mins
+duration   = 30 D
+what_to_show=MIDPOINT
+use_rth=True
+leverage=1
+strategy=Bollinger_Stochastic_RSI
+tc=-0.001
+metric=Sharpe
+
+########################################
+#############      AI       ############
+########################################
+Unsupervised_Learning=False
+Perform_Forecasting=False
+Perform_Tuner=False
+ForecastModelName=LSTM
+FutureForecastSteps=10
+
+########################################
+############   Trading Config  #########
+########################################
+history_days = 3
+trade_hours = 24
+minimum_future_trade_value = 100
+trade_value = 1000.0
+TN_trades = 100
+position = 0
+stop_loss_pct = 0.0025
+Total_stop_loss = 50
+Total_Take_Profit = 100
+Position_Long = True
+Position_Neutral = False
+Position_Short = True
+
+########################################
+## Recommendation
+## For Real-Time Trading:
+## Use 1-2 weeks of data for '15 mins' or 1-3 days of data for '5 mins'
+## For Backtesting:
+## Load 3-6 months of data for '15 mins' or 1-3 months for '5 mins'
+##
+## Notes for IBKR:
+## - 'duration' must match your 'bar_length'. E.g.:
+## - '1 min' → max 1 day ('1 D' or '2 D')
+## - '5 mins' → max 1-2 weeks
+## - 'what_to_show' options: TRADES, BID, ASK, MIDPOINT
+## - 'use_rth': True = Regular Trading Hours only, False = full data
+##
+########################################
+## Note for timezone
+## Europe/London, US/Eastern, 
+##
+########################################
+## symbol=EURUSD
+## asset_type=Forex
+## timezone=Europe/London
+## expiry = None
+## exchange = None
+## currency = USD
+##
+########################################
+## symbol=BTC
+## asset_type=crypto
+## secType=CRYPTO
+## timezone=US/Eastern
+## expiry=20250425
+## exchange=PAXOS
+##
+########################################
+## symbol     = DAX    
+## asset_type = cfd
+## secType    = CFD
+## timezone   = US/Eastern
+## expiry     = None
+## exchange   = IBIS
+## currency   = EUR
